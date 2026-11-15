@@ -106,7 +106,9 @@ Sau đó mở `http://localhost:8000` (hoặc địa chỉ được in ra).
 | Trang chủ | `index.html` | Banner slider, thống kê, khóa học nổi bật, dành cho bạn, tính năng, hành trình | `style.css` · `main.js` |
 | Giới thiệu | `gioi-thieu.html` | Banner, con số nổi bật, giá trị, lộ trình 4 bước, FAQ, form liên hệ | `style.css` + `pages/gioi-thieu.css` · `pages/gioi-thieu.js` |
 
-Menu trên mọi trang có thứ tự: **Trang chủ → Giới thiệu →** các mục riêng của trang.
+**Menu dùng chung**, giống hệt nhau trên mọi trang để chuyển trang không bị nhảy giao diện:
+**Trang chủ → Giới thiệu → Khám phá → Học của tôi → Nhóm → Hành trình**. Chỉ khác mục đang xem (`class="active" aria-current="page"`).
+Link tới phần của trang chủ luôn viết đầy đủ `index.html#...`. Dưới 1200px menu chuyển sang dạng ☰.
 
 ## Tạo trang mới với `/create-page`
 

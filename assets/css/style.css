@@ -16,7 +16,9 @@
   --shadow-hover: 0 14px 36px rgba(15, 40, 90, 0.16);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+/* scrollbar-gutter: giữ chỗ thanh cuộn để bề rộng trang không đổi khi chuyển trang;
+   scroll-padding-top: link #anchor không bị header sticky che */
+html { scroll-behavior: smooth; scrollbar-gutter: stable; scroll-padding-top: 80px; }
 body {
   font-family: "Be Vietnam Pro", system-ui, -apple-system, sans-serif;
   color: var(--text);
@@ -69,7 +71,8 @@ img { max-width: 100%; display: block; }
 .menu { display: flex; align-items: center; gap: 24px; }
 .nav { display: flex; align-items: center; gap: 6px; }
 .nav a {
-  padding: 8px 14px; border-radius: 8px; font-weight: 500; color: var(--text); transition: .2s;
+  padding: 8px 12px; border-radius: 8px; font-size: 15px; font-weight: 500; white-space: nowrap;
+  color: var(--text); transition: background-color .2s, color .2s;
 }
 .nav a:hover, .nav a.active { color: var(--primary); background: var(--primary-light); }
 .header-actions { display: flex; gap: 10px; }
@@ -215,7 +218,8 @@ section.block { padding: 72px 0 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid > :first-child { grid-column: 1 / -1; }
 }
-@media (max-width: 820px) {
+/* Menu đầy đủ (logo + 6 mục + 2 nút) cần ~1170px → dưới 1200px chuyển sang menu ☰ */
+@media (max-width: 1200px) {
   .menu-toggle { display: block; }
   .menu { display: none; }
   .header.open .menu {

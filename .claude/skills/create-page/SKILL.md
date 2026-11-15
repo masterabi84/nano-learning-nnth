@@ -38,7 +38,7 @@ Dùng thẻ ngữ nghĩa, `lang="vi"`, có `<title>` và `<meta name="descriptio
 
 | # | Phần | Yêu cầu |
 |---|---|---|
-| 0 | Skip link + Header | Sao chép header từ `index.html` (logo `assets/images/logo.png`, nút ☰ `#menuToggle`). Link "Trang chủ" trỏ về `index.html`; các mục menu trỏ tới anchor của trang mới. |
+| 0 | Skip link + Header | Sao chép **nguyên vẹn** header từ `index.html` – menu dùng chung, cùng thứ tự, cùng href (`index.html#...`) trên mọi trang để chuyển trang không nhảy giao diện. Chỉ chuyển `class="active" aria-current="page"` sang mục của trang hiện tại. **Không** thêm mục menu riêng cho các phần trong trang (dùng nút ở banner để cuộn tới). Nếu trang mới cần có trong menu: thêm cùng một link vào header của **tất cả** các trang và kiểm tra menu vẫn vừa trên 1200px. |
 | 1 | **Banner giới thiệu** (`#hero`) | Badge nhỏ, tiêu đề H1 (duy nhất trên trang), mô tả ngắn 1–2 câu, 2 nút (`.btn-accent` chính + `.btn-outline` phụ) cuộn tới phần CTA/thông tin. Có minh họa bằng khối gradient/emoji (không dùng ảnh ngoài). |
 | 2 | **Thông tin nổi bật** (`#highlights`) | 3–4 thẻ số liệu/điểm nhấn, số dùng `data-count="<số>"` để chạy hiệu ứng đếm. |
 | 3 | **Tiện ích / Giá trị** (`#benefits`) | 4–6 thẻ: icon emoji + tiêu đề + mô tả. Có thể thêm 1 khối phụ phù hợp nội dung (lộ trình, FAQ dạng accordion, bảng giá, lịch học...). |
