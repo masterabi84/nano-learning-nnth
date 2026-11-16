@@ -72,7 +72,7 @@ Dự án này là phần **giao diện web tĩnh** (landing page): trang chủ g
 │   │   └── pages/
 │   │       └── gioi-thieu.js      # Tương tác trang Giới thiệu
 │   └── images/
-│       └── logo.png               # Logo EVNSPC
+│       └── logo.png               # Logo Nano Learning
 ├── index.html                     # Trang chủ
 ├── gioi-thieu.html                # Trang Giới thiệu
 └── README.md
